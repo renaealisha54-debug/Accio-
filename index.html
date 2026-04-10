@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Accio IDE - Offline Mobile Compiler</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <div class="header-info">
+                <h1 class="header-title">Accio IDE</h1>
+                <div class="header-subtitle">Local Build Engine v3.0</div>
+            </div>
+            <div class="offline-status"><div class="status-dot"></div><span>Local Mode</span></div>
+        </header>
+
+        <div id="editor-section">
+            <textarea id="code-editor" spellcheck="false" placeholder="// Start coding..."></textarea>
+        </div>
+
+        <div id="terminal-section">
+            <div class="terminal-label"><span>CONSOLE OUTPUT</span><span id="storage-usage">Cache: 0KB</span></div>
+            <div id="terminal-output">> System initialized.</div>
+        </div>
+
+        <div id="menu-section">
+            <div class="menu-grid">
+                <button class="action-btn btn-run" onclick="handleAction('RUN')">▶️ RUN</button>
+                <button class="action-btn" onclick="handleAction('TEMPLATES')">📑 TEMPLATES</button>
+                <button class="action-btn btn-build" onclick="handleAction('BUILD')">🏗️ BUILD</button>
+                <button class="action-btn" onclick="handleAction('STORAGE')">🧹 CACHE</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="build-modal" class="modal-overlay">...</div>
+
+    <script src="js/ProjectManager.js"></script>
+    <script src="js/TerminalEngine.js"></script>
+    <script src="js/CompilerCore.js"></script>
+    <script src="js/MainController.js"></script>
+</body>
+</html>
